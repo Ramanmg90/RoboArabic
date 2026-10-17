@@ -1,0 +1,10 @@
+{
+  "version": "0.2.0-sample",
+  "isSample": true,
+  "sourceNote": "محتوای نمونه‌ی آموزشی؛ از کتاب رسمی پایه نهم نیست و تأیید نشده است.",
+  "lessons": [
+    "s1.json",
+    "s2.json",
+    "s3.json"
+  ]
+}

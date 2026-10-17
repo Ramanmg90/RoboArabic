@@ -1,0 +1,136 @@
+{
+  "id": "s3",
+  "order": 3,
+  "title": "اعداد و مثنی",
+  "subtitle": "نمونه: مفرد، مثنی و جمع",
+  "status": "sample",
+  "intro": "در این درس نمونه اعداد یک تا پنج و ساختن مثنی و جمع را تمرین می‌کنی.",
+  "text": {
+    "arabic": "عِنْدِي كِتَابٌ وَاحِدٌ. عِنْدِي قَلَمَانِ.",
+    "persian": "من یک کتاب دارم. من دو قلم دارم."
+  },
+  "vocabulary": [
+    {
+      "id": "s3-v1",
+      "arabic": "وَاحِدٌ",
+      "persian": "یک",
+      "example": ""
+    },
+    {
+      "id": "s3-v2",
+      "arabic": "اِثْنَانِ",
+      "persian": "دو",
+      "example": ""
+    },
+    {
+      "id": "s3-v3",
+      "arabic": "ثَلَاثَةٌ",
+      "persian": "سه",
+      "example": ""
+    },
+    {
+      "id": "s3-v4",
+      "arabic": "أَرْبَعَةٌ",
+      "persian": "چهار",
+      "example": ""
+    },
+    {
+      "id": "s3-v5",
+      "arabic": "خَمْسَةٌ",
+      "persian": "پنج",
+      "example": ""
+    },
+    {
+      "id": "s3-v6",
+      "arabic": "كُتُبٌ",
+      "persian": "کتاب‌ها",
+      "example": ""
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g-mothanna",
+      "title": "مفرد، مثنی و جمع",
+      "difficulty": 3,
+      "explanation": "برای ساختن مثنی (دوتایی) به آخر اسم «ـانِ» اضافه می‌شود. بعضی اسم‌ها جمع مکسر دارند که قاعدهٔ ثابتی ندارد و باید حفظ شود.",
+      "examples": [
+        {
+          "arabic": "كِتَابٌ - كِتَابَانِ - كُتُبٌ",
+          "persian": "کتاب - دو کتاب - کتاب‌ها"
+        },
+        {
+          "arabic": "قَلَمٌ - قَلَمَانِ - أَقْلَامٌ",
+          "persian": "قلم - دو قلم - قلم‌ها"
+        }
+      ]
+    }
+  ],
+  "examTips": [
+    "جمع مکسر قاعدهٔ ثابت ندارد؛ شکل جمع را همراه مفرد حفظ کن."
+  ],
+  "questions": [
+    {
+      "id": "s3-q1",
+      "topicId": "g-mothanna",
+      "type": "multipleChoice",
+      "prompt": "مثنای «قَلَمٌ» کدام است؟",
+      "options": [
+        "قَلَمَانِ",
+        "أَقْلَامٌ",
+        "قَلَمَةٌ",
+        "قَلَمُونَ"
+      ],
+      "acceptedAnswers": [
+        "قَلَمَانِ"
+      ],
+      "explanation": "مثنا با افزودن «ـانِ» ساخته می‌شود.",
+      "difficulty": 3
+    },
+    {
+      "id": "s3-q2",
+      "topicId": "g-mothanna",
+      "type": "multipleChoice",
+      "prompt": "جمع مکسر «كِتَابٌ» کدام است؟",
+      "options": [
+        "كِتَابَانِ",
+        "كُتُبٌ",
+        "كِتَابُونَ",
+        "كِتَابَاتٌ"
+      ],
+      "acceptedAnswers": [
+        "كُتُبٌ"
+      ],
+      "explanation": "جمع مکسر «كِتَابٌ»، «كُتُبٌ» است.",
+      "difficulty": 3
+    },
+    {
+      "id": "s3-q3",
+      "topicId": "vocab",
+      "type": "multipleChoice",
+      "prompt": "معنی «ثَلَاثَةٌ» چیست؟",
+      "options": [
+        "سه",
+        "دو",
+        "چهار",
+        "پنج"
+      ],
+      "acceptedAnswers": [
+        "سه"
+      ],
+      "explanation": "«ثَلَاثَةٌ» یعنی سه.",
+      "difficulty": 1
+    },
+    {
+      "id": "s3-q4",
+      "topicId": "translation",
+      "type": "translationSelf",
+      "prompt": "ترجمه کنید: عِنْدِي قَلَمَانِ.",
+      "options": [],
+      "acceptedAnswers": [
+        "من دو قلم دارم."
+      ],
+      "explanation": "ترجمه آزاد است؛ پاسخ خود را با نمونه مقایسه کنید.",
+      "difficulty": 2
+    }
+  ]
+}

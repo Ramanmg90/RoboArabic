@@ -1,0 +1,63 @@
+name: Android APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Install system SQLite (for DB tests)
+        run: sudo apt-get update && sudo apt-get install -y libsqlite3-dev
+
+      - name: Create Android platform files if missing
+        run: |
+          if [ ! -d android ]; then
+            flutter create --platforms=android --project-name roboarabic --org ir.roboarabic .
+            rm -f test/widget_test.dart
+          fi
+
+      - run: flutter pub get
+
+      # TEMPORARY: formats the code and commits it.
+      # After a green run, replace with:
+      #   dart format --output=none --set-exit-if-changed .
+      - name: Auto-format and commit (temporary)
+        run: |
+          dart format .
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions"
+            git config user.email "github-actions@users.noreply.github.com"
+            git add -A
+            git commit -m "style: dart format"
+            git push
+          fi
+
+      - run: flutter analyze
+      - run: flutter test
+
+      # Flutter's default template signs release builds with the DEBUG key.
+      # Installable for testing, NOT a production-signed release.
+      - run: flutter build apk --release
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: RoboArabic-Android-APK
+          path: build/app/outputs/flutter-apk/app-release.apk
+          if-no-files-found: error

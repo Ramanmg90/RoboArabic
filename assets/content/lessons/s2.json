@@ -1,0 +1,137 @@
+{
+  "id": "s2",
+  "order": 2,
+  "title": "خانواده",
+  "subtitle": "نمونه: ضمایر منفصل",
+  "status": "sample",
+  "intro": "در این درس نمونه با اعضای خانواده و ضمیرهای جدا (منفصل) آشنا می‌شوی.",
+  "text": {
+    "arabic": "هَذَا أَبٌ. هَذِهِ أُمٌّ. هُوَ مُعَلِّمٌ. هِيَ مُعَلِّمَةٌ.",
+    "persian": "این پدر است. این مادر است. او معلم است. او (زن) معلم است."
+  },
+  "vocabulary": [
+    {
+      "id": "s2-v1",
+      "arabic": "أَبٌ",
+      "persian": "پدر",
+      "example": ""
+    },
+    {
+      "id": "s2-v2",
+      "arabic": "أُمٌّ",
+      "persian": "مادر",
+      "example": ""
+    },
+    {
+      "id": "s2-v3",
+      "arabic": "أَخٌ",
+      "persian": "برادر",
+      "example": ""
+    },
+    {
+      "id": "s2-v4",
+      "arabic": "أُخْتٌ",
+      "persian": "خواهر",
+      "example": ""
+    },
+    {
+      "id": "s2-v5",
+      "arabic": "جَدٌّ",
+      "persian": "پدربزرگ",
+      "example": ""
+    },
+    {
+      "id": "s2-v6",
+      "arabic": "جَدَّةٌ",
+      "persian": "مادربزرگ",
+      "example": ""
+    },
+    {
+      "id": "s2-v7",
+      "arabic": "مُعَلِّمَةٌ",
+      "persian": "معلم (زن)",
+      "example": "هِيَ مُعَلِّمَةٌ."
+    }
+  ],
+  "grammar": [
+    {
+      "id": "g-zamir",
+      "title": "ضمایر منفصل",
+      "difficulty": 2,
+      "explanation": "ضمیرهای جدا: «أَنَا» (من)، «أَنْتَ» (تو، مذکر)، «أَنْتِ» (تو، مؤنث)، «هُوَ» (او، مذکر)، «هِيَ» (او، مؤنث).",
+      "examples": [
+        {
+          "arabic": "أَنَا طَالِبٌ.",
+          "persian": "من دانش‌آموزم."
+        },
+        {
+          "arabic": "هِيَ مُعَلِّمَةٌ.",
+          "persian": "او (زن) معلم است."
+        }
+      ]
+    }
+  ],
+  "examTips": [
+    "«هُوَ» برای مذکر و «هِيَ» برای مؤنث است."
+  ],
+  "questions": [
+    {
+      "id": "s2-q1",
+      "topicId": "g-zamir",
+      "type": "multipleChoice",
+      "prompt": "ضمیر مناسب برای «او (زن)» کدام است؟",
+      "options": [
+        "هُوَ",
+        "هِيَ",
+        "أَنَا",
+        "أَنْتَ"
+      ],
+      "acceptedAnswers": [
+        "هِيَ"
+      ],
+      "explanation": "«هِيَ» ضمیر سوم‌شخص مؤنث است.",
+      "difficulty": 2
+    },
+    {
+      "id": "s2-q2",
+      "topicId": "g-zamir",
+      "type": "multipleChoice",
+      "prompt": "معنی «أَنَا» چیست؟",
+      "options": [
+        "من",
+        "تو",
+        "او",
+        "ما"
+      ],
+      "acceptedAnswers": [
+        "من"
+      ],
+      "explanation": "«أَنَا» یعنی من.",
+      "difficulty": 1
+    },
+    {
+      "id": "s2-q3",
+      "topicId": "vocab",
+      "type": "fillBlank",
+      "prompt": "«مادر» به عربی چه می‌شود؟",
+      "options": [],
+      "acceptedAnswers": [
+        "أم"
+      ],
+      "explanation": "پاسخ «أُمٌّ» است.",
+      "difficulty": 2
+    },
+    {
+      "id": "s2-q4",
+      "topicId": "translation",
+      "type": "translationSelf",
+      "prompt": "ترجمه کنید: هِيَ مُعَلِّمَةٌ.",
+      "options": [],
+      "acceptedAnswers": [
+        "او (زن) معلم است."
+      ],
+      "explanation": "ترجمه آزاد است؛ پاسخ خود را با نمونه مقایسه کنید.",
+      "difficulty": 2
+    }
+  ]
+}
