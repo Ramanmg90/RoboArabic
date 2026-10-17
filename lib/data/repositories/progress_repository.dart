@@ -38,8 +38,7 @@ class ProgressRepository {
     if (from < 2) {
       await db.execute(
           'CREATE TABLE answer_log(id INTEGER PRIMARY KEY AUTOINCREMENT, question_id TEXT NOT NULL, lesson_id TEXT NOT NULL, topic_id TEXT NOT NULL, correct INTEGER NOT NULL, at INTEGER NOT NULL)');
-      await db.execute(
-          'CREATE TABLE activity_days(day TEXT PRIMARY KEY)');
+      await db.execute('CREATE TABLE activity_days(day TEXT PRIMARY KEY)');
     }
     // if (from < 3) { add new tables/columns here, never drop existing data }
   }
@@ -55,7 +54,11 @@ class ProgressRepository {
 
   Future<void> saveClaim(String key, int xp) => _db.insert(
         'reward_claims',
-        {'claim_key': key, 'xp': xp, 'at': DateTime.now().millisecondsSinceEpoch},
+        {
+          'claim_key': key,
+          'xp': xp,
+          'at': DateTime.now().millisecondsSinceEpoch
+        },
         conflictAlgorithm: ConflictAlgorithm.ignore,
       );
 

@@ -38,10 +38,12 @@ class _HomePageState extends State<HomePage> {
         onDestinationSelected: _go,
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home_outlined), label: 'خانه'),
-          NavigationDestination(icon: Icon(Icons.map_outlined), label: 'درس‌ها'),
+          NavigationDestination(
+              icon: Icon(Icons.map_outlined), label: 'درس‌ها'),
           NavigationDestination(
               icon: Icon(Icons.sports_esports_outlined), label: 'بازی'),
-          NavigationDestination(icon: Icon(Icons.quiz_outlined), label: 'آزمون'),
+          NavigationDestination(
+              icon: Icon(Icons.quiz_outlined), label: 'آزمون'),
           NavigationDestination(
               icon: Icon(Icons.person_outline), label: 'پروفایل'),
         ],

@@ -49,8 +49,8 @@ void main() {
   });
 
   group('achievements', () {
-    const none = UserStats(
-        xp: 0, correctAnswers: 0, lessonsCompleted: 0, knownWords: 0);
+    const none =
+        UserStats(xp: 0, correctAnswers: 0, lessonsCompleted: 0, knownWords: 0);
 
     test('nothing earned for a new user', () {
       expect(newlyEarned(none, {}), isEmpty);

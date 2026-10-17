@@ -41,8 +41,8 @@ class GamesPage extends StatelessWidget {
         Icons.flash_on,
         'چالش واژگان',
         'سؤال‌های چندگزینه‌ای از واژه‌های درس‌ها',
-        () => run('چالش واژگان',
-            ExerciseGenerator(vocab).vocabChoices(count: 8)),
+        () =>
+            run('چالش واژگان', ExerciseGenerator(vocab).vocabChoices(count: 8)),
       ),
       (
         Icons.translate,

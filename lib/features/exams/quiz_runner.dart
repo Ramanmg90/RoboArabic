@@ -193,7 +193,8 @@ class _QuizRunnerState extends State<QuizRunner> {
                 children: [
                   const Icon(Icons.timer_outlined, size: 18),
                   const SizedBox(width: 4),
-                  Text('${toFa(_remaining ~/ 60)}:${toFa(_remaining % 60).padLeft(2, '۰')}'),
+                  Text(
+                      '${toFa(_remaining ~/ 60)}:${toFa(_remaining % 60).padLeft(2, '۰')}'),
                 ],
               ),
           ],
@@ -204,7 +205,8 @@ class _QuizRunnerState extends State<QuizRunner> {
         GlassCard(
           child: Text(
             q.prompt,
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, height: 1.7),
+            style: const TextStyle(
+                fontSize: 20, fontWeight: FontWeight.bold, height: 1.7),
           ),
         ),
         const SizedBox(height: 12),
@@ -213,7 +215,8 @@ class _QuizRunnerState extends State<QuizRunner> {
             QuestionOptionTile(
               text: o,
               state: _optionState(q, o),
-              onTap: _verdict == null ? () => setState(() => _selected = o) : null,
+              onTap:
+                  _verdict == null ? () => setState(() => _selected = o) : null,
             )
         else if (q.type == QuestionType.fillBlank)
           TextField(
@@ -290,7 +293,8 @@ class _QuizRunnerState extends State<QuizRunner> {
             ],
           ),
           const SizedBox(height: 8),
-          if (v == Verdict.selfAssess) Text('پاسخ نمونه: ${q.acceptedAnswers.first}'),
+          if (v == Verdict.selfAssess)
+            Text('پاسخ نمونه: ${q.acceptedAnswers.first}'),
           Text(q.explanation),
         ],
       ),
@@ -298,15 +302,19 @@ class _QuizRunnerState extends State<QuizRunner> {
   }
 
   Widget _summary() {
-    final graded = _entries.where((e) => e.verdict != Verdict.selfAssess).toList();
+    final graded =
+        _entries.where((e) => e.verdict != Verdict.selfAssess).toList();
     final correct = graded.where((e) => e.verdict == Verdict.correct).length;
     final wrong = graded.where((e) => e.verdict == Verdict.incorrect).toList();
-    final selfs = _entries.where((e) => e.verdict == Verdict.selfAssess).toList();
+    final selfs =
+        _entries.where((e) => e.verdict == Verdict.selfAssess).toList();
     final leveledUp = widget.state.level > _levelBefore;
 
     final byTopic = <String, List<bool>>{};
     for (final e in graded) {
-      byTopic.putIfAbsent(e.question.topicId, () => []).add(e.verdict == Verdict.correct);
+      byTopic
+          .putIfAbsent(e.question.topicId, () => [])
+          .add(e.verdict == Verdict.correct);
     }
 
     return ListView(
@@ -319,7 +327,8 @@ class _QuizRunnerState extends State<QuizRunner> {
               const SizedBox(height: 8),
               Text(
                 '${toFa(correct)} از ${toFa(graded.length)} پاسخ درست',
-                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 4),
               Text('امتیاز این دور: ${toFa(_xp)} XP'),
@@ -337,7 +346,8 @@ class _QuizRunnerState extends State<QuizRunner> {
         ),
         if (byTopic.isNotEmpty) ...[
           const SizedBox(height: 12),
-          const Text('عملکرد بر اساس مبحث', style: TextStyle(fontWeight: FontWeight.bold)),
+          const Text('عملکرد بر اساس مبحث',
+              style: TextStyle(fontWeight: FontWeight.bold)),
           const SizedBox(height: 6),
           for (final e in byTopic.entries)
             Padding(
@@ -350,7 +360,8 @@ class _QuizRunnerState extends State<QuizRunner> {
         ],
         if (wrong.isNotEmpty) ...[
           const SizedBox(height: 12),
-          const Text('مرور پاسخ‌های نادرست', style: TextStyle(fontWeight: FontWeight.bold)),
+          const Text('مرور پاسخ‌های نادرست',
+              style: TextStyle(fontWeight: FontWeight.bold)),
           for (final e in wrong)
             Padding(
               padding: const EdgeInsets.only(top: 8),
@@ -361,7 +372,8 @@ class _QuizRunnerState extends State<QuizRunner> {
                     Text(e.question.prompt),
                     const SizedBox(height: 4),
                     Text('پاسخ شما: ${e.answer}'),
-                    ArabicText('پاسخ درست: ${e.question.acceptedAnswers.first}', size: 18),
+                    ArabicText('پاسخ درست: ${e.question.acceptedAnswers.first}',
+                        size: 18),
                     Text(e.question.explanation),
                   ],
                 ),
@@ -370,7 +382,8 @@ class _QuizRunnerState extends State<QuizRunner> {
         ],
         if (selfs.isNotEmpty) ...[
           const SizedBox(height: 12),
-          const Text('خودارزیابی (بدون نمره)', style: TextStyle(fontWeight: FontWeight.bold)),
+          const Text('خودارزیابی (بدون نمره)',
+              style: TextStyle(fontWeight: FontWeight.bold)),
           for (final e in selfs)
             Padding(
               padding: const EdgeInsets.only(top: 8),

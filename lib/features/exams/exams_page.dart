@@ -26,8 +26,9 @@ class ExamsPage extends StatelessWidget {
       ..shuffle();
   }
 
-  void _start(BuildContext context, String title, List<Question> qs,
-      String label, {Duration? limit}) {
+  void _start(
+      BuildContext context, String title, List<Question> qs, String label,
+      {Duration? limit}) {
     openPage(
       context,
       title,
@@ -115,8 +116,8 @@ class ExamsPage extends StatelessWidget {
               ListTile(
                 leading: const Icon(Icons.history),
                 title: Text(attemptTitle(c, a.lessonId)),
-                subtitle: Text(
-                    '${toFa(a.correct)} از ${toFa(a.total)} پاسخ درست'),
+                subtitle:
+                    Text('${toFa(a.correct)} از ${toFa(a.total)} پاسخ درست'),
               ),
         ],
       ),

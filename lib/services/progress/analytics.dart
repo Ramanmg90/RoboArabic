@@ -52,5 +52,8 @@ List<String> wrongQuestionIds(List<AnswerLogEntry> log) {
     final prev = latest[e.questionId];
     if (prev == null || !e.at.isBefore(prev.at)) latest[e.questionId] = e;
   }
-  return latest.values.where((e) => !e.correct).map((e) => e.questionId).toList();
+  return latest.values
+      .where((e) => !e.correct)
+      .map((e) => e.questionId)
+      .toList();
 }

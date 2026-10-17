@@ -159,7 +159,8 @@ class _WordMatchPageState extends State<WordMatchPage> {
                           : _wrongRight == w.id
                               ? OptionState.wrong
                               : OptionState.idle,
-                      onTap: _matched.contains(w.id) ? null : () => _tapRight(w),
+                      onTap:
+                          _matched.contains(w.id) ? null : () => _tapRight(w),
                     ),
                 ],
               ),

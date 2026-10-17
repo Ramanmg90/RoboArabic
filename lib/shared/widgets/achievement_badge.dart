@@ -4,7 +4,8 @@ import '../../core/theme/app_theme.dart';
 
 /// Unlocked state is shown with icon + label, not color alone.
 class AchievementBadge extends StatelessWidget {
-  const AchievementBadge({super.key, required this.title, required this.unlocked});
+  const AchievementBadge(
+      {super.key, required this.title, required this.unlocked});
   final String title;
   final bool unlocked;
 

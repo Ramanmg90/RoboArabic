@@ -27,8 +27,7 @@ class _VocabularyPageState extends State<VocabularyPage> {
       listenable: widget.state,
       builder: (context, _) {
         final all = widget.state.content.vocabulary;
-        final items =
-            _reviewOnly ? reviewQueue(all, widget.state.vocab) : all;
+        final items = _reviewOnly ? reviewQueue(all, widget.state.vocab) : all;
         return Padding(
           padding: const EdgeInsets.all(16),
           child: Column(

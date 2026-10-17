@@ -26,7 +26,8 @@ class ProgressPage extends StatelessWidget {
         final maxDay = days.fold(1, (a, b) => b > a ? b : a);
         final reviewed =
             state.vocab.values.where((s) => s.name != 'unknown').length;
-        final lessonsDone = c.lessons.where((l) => state.lessonDone(l.id)).length;
+        final lessonsDone =
+            c.lessons.where((l) => state.lessonDone(l.id)).length;
 
         Widget tile(String label, String value) => Expanded(
               child: GlassCard(
@@ -154,8 +155,8 @@ class ProgressPage extends StatelessWidget {
                 ListTile(
                   leading: const Icon(Icons.history),
                   title: Text(attemptTitle(c, a.lessonId)),
-                  subtitle: Text(
-                      '${toFa(a.correct)} از ${toFa(a.total)} پاسخ درست'),
+                  subtitle:
+                      Text('${toFa(a.correct)} از ${toFa(a.total)} پاسخ درست'),
                 ),
             const SizedBox(height: 16),
             const Text('دستاوردها',

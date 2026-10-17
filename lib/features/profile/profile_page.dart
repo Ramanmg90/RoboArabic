@@ -89,7 +89,8 @@ class _ProfilePageState extends State<ProfilePage> {
                 const SizedBox(height: 8),
                 SegmentedButton<ThemeMode>(
                   segments: const [
-                    ButtonSegment(value: ThemeMode.system, label: Text('سیستم')),
+                    ButtonSegment(
+                        value: ThemeMode.system, label: Text('سیستم')),
                     ButtonSegment(value: ThemeMode.light, label: Text('روشن')),
                     ButtonSegment(value: ThemeMode.dark, label: Text('تیره')),
                   ],

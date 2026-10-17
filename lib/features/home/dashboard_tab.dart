@@ -20,7 +20,8 @@ import '../progress/progress_page.dart';
 import '../vocabulary/vocabulary_page.dart';
 
 class DashboardTab extends StatelessWidget {
-  const DashboardTab({super.key, required this.state, required this.onNavigate});
+  const DashboardTab(
+      {super.key, required this.state, required this.onNavigate});
   final AppState state;
   final ValueChanged<int> onNavigate;
 
@@ -46,7 +47,8 @@ class DashboardTab extends StatelessWidget {
         final cont = _continueLesson();
         final name = state.nickname.isEmpty ? '' : ' ${state.nickname}';
 
-        Widget quick(IconData icon, String label, VoidCallback onTap) => Expanded(
+        Widget quick(IconData icon, String label, VoidCallback onTap) =>
+            Expanded(
               child: InkWell(
                 onTap: onTap,
                 borderRadius: BorderRadius.circular(AppRadius.card),
@@ -100,7 +102,8 @@ class DashboardTab extends StatelessWidget {
                     children: [
                       Icon(
                         done >= target ? Icons.check_circle : Icons.flag,
-                        color: done >= target ? AppColors.mint : AppColors.orange,
+                        color:
+                            done >= target ? AppColors.mint : AppColors.orange,
                       ),
                       const SizedBox(width: 8),
                       Expanded(
@@ -163,9 +166,17 @@ class DashboardTab extends StatelessWidget {
               children: [
                 quick(Icons.map, 'درس‌ها', () => onNavigate(1)),
                 const SizedBox(width: 8),
-                quick(Icons.style, 'واژگان', () => openPage(context, 'واژگان', VocabularyPage(state: state))),
+                quick(
+                    Icons.style,
+                    'واژگان',
+                    () => openPage(
+                        context, 'واژگان', VocabularyPage(state: state))),
                 const SizedBox(width: 8),
-                quick(Icons.menu_book, 'گرامر', () => openPage(context, 'آکادمی گرامر', GrammarPage(state: state))),
+                quick(
+                    Icons.menu_book,
+                    'گرامر',
+                    () => openPage(
+                        context, 'آکادمی گرامر', GrammarPage(state: state))),
                 const SizedBox(width: 8),
                 quick(Icons.quiz, 'آزمون', () => onNavigate(3)),
               ],
